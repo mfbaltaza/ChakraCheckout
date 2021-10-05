@@ -42,7 +42,7 @@ const Details: NextPage = () => {
           <Checkbox defaultChecked colorScheme="green">Ship to the billing address</Checkbox>
         </GridItem>
         <GridItem colSpan={2}>
-          <Button size="lg" w="full">Place Order</Button>
+          <Button size="lg" w="full" colorScheme="green">Place Order</Button>
         </GridItem>
       </SimpleGrid>
     </VStack>
