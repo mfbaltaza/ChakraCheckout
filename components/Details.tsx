@@ -1,5 +1,17 @@
 import type { NextPage } from "next";
-import { FormControl, FormLabel, Input, Select, Checkbox, Button, VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  Select,
+  Checkbox,
+  Button,
+  VStack,
+  Heading,
+  Text,
+  SimpleGrid,
+  GridItem,
+} from "@chakra-ui/react";
 
 const Details: NextPage = () => {
   return (
@@ -39,10 +51,19 @@ const Details: NextPage = () => {
           </Select>
         </GridItem>
         <GridItem colSpan={2}>
-          <Checkbox defaultChecked colorScheme="green">Ship to the billing address</Checkbox>
+          <Checkbox defaultChecked colorScheme="green">
+            Ship to the billing address
+          </Checkbox>
         </GridItem>
         <GridItem colSpan={2}>
-          <Button size="lg" w="full" colorScheme="green">Place Order</Button>
+          <Button
+            size="lg"
+            w="full"
+            colorScheme="green"
+            onClick={() => console.log("Keep Winning")}
+          >
+            Place Order
+          </Button>
         </GridItem>
       </SimpleGrid>
     </VStack>
