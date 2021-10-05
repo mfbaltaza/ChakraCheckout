@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Container, Flex, VStack } from '@chakra-ui/react'
+import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/react'
+import Cart from '../components/Cart'
+import Details from '../components/Details'
 
 const Home: NextPage = () => {
   return (
@@ -14,8 +16,8 @@ const Home: NextPage = () => {
       <main>
         <Container maxW="xl" padding="0">
           <Flex h="100vh" py={30}>
-            <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start"></VStack>
-            <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start" bgColor="gray.50"></VStack>
+            <Cart />
+            <Details />
           </Flex>
         </Container>
       </main>
