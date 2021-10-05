@@ -24,16 +24,23 @@ const Cart: NextPage = () => {
       <VStack alignItems="flex-start" spacing={3}>
         <Heading>Your Cart</Heading>
         <Text>
+          {/* The space within the brackets is to properly add a space before the button */}
           If price is too hard on your eyes,{" "}
           <Button variant="link" colorScheme="black">
             try changing the theme.
           </Button>
         </Text>
       </VStack>
+      {/* We Add a Horizontal Stack that takes all the width and center the items */}
       <HStack alignItems="center" spacing={6} w="full">
+        {/* With AspectRatio from Chakra and the ratio in 1 we set the layout for a square */}
         <AspectRatio ratio={1} w={24}>
           <Image></Image>
         </AspectRatio>
+        {/* With Stack we can manage the stack in both axis */}
+        {/* This stack in combination with VStack we use it to create separation between the item
+        and the price in the same horizontal space */}
+        {/* Here we use it to contain VStack and Heading and apply them an space-between for separation */}
         <Stack
           spacing={0}
           w="full"
@@ -48,6 +55,7 @@ const Cart: NextPage = () => {
           <Heading size="sm">$119.00</Heading>
         </Stack>
       </HStack>
+      {/* We need to stretch items in the VStack if we want the total to fully separate from the price */}
       <VStack alignItems="stretch" w="full">
         <HStack justifyContent="space-between">
           <Text>Subtotal</Text>
