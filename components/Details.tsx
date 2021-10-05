@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { FormControl, FormLabel, Input, VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Select, Checkbox, Button, VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react";
 
 const Details: NextPage = () => {
   return (
@@ -20,6 +20,25 @@ const Details: NextPage = () => {
         <GridItem colSpan={2}>
           <FormLabel>Address</FormLabel>
           <Input placeholder="Blvd. Broken Dreams 21" />
+        </GridItem>
+        <GridItem colSpan={1}>
+          <FormLabel>City</FormLabel>
+          <Input placeholder="San Francisco" />
+        </GridItem>
+        <GridItem colSpan={1}>
+          <FormLabel>Country</FormLabel>
+          <Select>
+            <option value="usa">United States</option>
+            <option value="de">Germany</option>
+            <option value="it">Italy</option>
+            <option value="ven">Venezuela</option>
+          </Select>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Checkbox defaultChecked colorScheme="green">Ship to the billing address</Checkbox>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Button size="lg" w="full">Place Order</Button>
         </GridItem>
       </SimpleGrid>
     </VStack>
