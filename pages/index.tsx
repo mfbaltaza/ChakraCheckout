@@ -4,7 +4,7 @@ import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/react'
 import Details from '../components/Details'
 import Cart from '../components/Cart'
 
-const Home: NextPage = () => {
+const Index: NextPage = () => {
   return (
     <div>
       <Head>
@@ -14,8 +14,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Container maxW="container.xl" padding="0">
-          <Flex h="100vh" py={30}>
+        <Container maxW="container.xl" p="0">
+          <Flex h="100vh" py={20}>
             <Details />
             <Cart />
           </Flex>
@@ -25,4 +25,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Index
