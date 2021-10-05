@@ -3,12 +3,16 @@ import { FormControl, FormLabel, Input, Select, Checkbox, Button, VStack, Headin
 
 const Details: NextPage = () => {
   return (
+    // We use VStack to stack components vertically
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
-      <VStack spacing={3}>
+      {/* Here we nest a VSTack to change spacing specificalyl between heading and text */}
+      <VStack spacing={3} alignItems="flex-start">
         <Heading size="2xl">Your Details</Heading>
         <Text>If you already have an account, click here to log in.</Text>
       </VStack>
+      {/* We use SimpleGrid to implement Grid with Chakra */}
       <SimpleGrid columns={2} columnGap={3} rowGap={6} w="full">
+        {/* And with GridItem we can start positioning elements within the Grid */}
         <GridItem colSpan={1}>
           <FormLabel>First Name</FormLabel>
           <Input placeholder="John" />
