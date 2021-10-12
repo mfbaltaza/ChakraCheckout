@@ -62,6 +62,7 @@ const Details: NextPage = () => {
           <Button
             size="lg"
             w="full"
+            variant="primary"
             colorScheme="brand"
             onClick={() => console.log("Keep Winning")}
           >
