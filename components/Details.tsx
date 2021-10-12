@@ -11,9 +11,12 @@ import {
   Text,
   SimpleGrid,
   GridItem,
+  useBreakpointValue
 } from "@chakra-ui/react";
 
 const Details: NextPage = () => {
+  const colSpan = useBreakpointValue({ base: 2, md: 1 })
+
   return (
     // We use VStack to stack components vertically
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
@@ -25,11 +28,11 @@ const Details: NextPage = () => {
       {/* We use SimpleGrid to implement Grid with Chakra */}
       <SimpleGrid columns={2} columnGap={3} rowGap={6} w="full">
         {/* And with GridItem we can start positioning elements within the Grid */}
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormLabel>First Name</FormLabel>
           <Input placeholder="John" />
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormLabel>Last Name</FormLabel>
           <Input placeholder="Doe" />
         </GridItem>
@@ -37,11 +40,11 @@ const Details: NextPage = () => {
           <FormLabel>Address</FormLabel>
           <Input placeholder="Blvd. Broken Dreams 21" />
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormLabel>City</FormLabel>
           <Input placeholder="San Francisco" />
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormLabel>Country</FormLabel>
           <Select>
             <option value="usa">United States</option>
