@@ -54,7 +54,7 @@ const Details: NextPage = () => {
           </Select>
         </GridItem>
         <GridItem colSpan={2}>
-          <Checkbox defaultChecked colorScheme="green">
+          <Checkbox defaultChecked colorScheme="brand">
             Ship to the billing address
           </Checkbox>
         </GridItem>
